@@ -35,7 +35,7 @@ Course project (BTL ĐLCN) at HCM University of Technology.
 ## 📂 Project structure
 
 ```text
-BTLĐLCN/
+STM32-Temperature-Monitor/
 ├── Hardware/BTL_DLCN/        # Altium Designer project: schematic + PCB
 ├── MCU/BTL/                  # STM32CubeIDE firmware (main.c: capture, filter, UART)
 └── GUI/TemperatureMonitor/   # C# WinForms monitoring app (.sln)
@@ -44,16 +44,16 @@ BTLĐLCN/
 ## 🚀 Getting started
 
 **Firmware**
-1. Open `BTLĐLCN/MCU/BTL` in **STM32CubeIDE**, build and flash.
+1. Open `MCU/BTL` in **STM32CubeIDE**, build and flash.
 2. Connect USART1 (PA9 TX / PA10 RX) to the PC through a USB-TTL adapter.
 
 **GUI**
-1. Open `BTLĐLCN/GUI/TemperatureMonitor/TemperatureMonitor.sln` in **Visual Studio**.
+1. Open `GUI/TemperatureMonitor/TemperatureMonitor.sln` in **Visual Studio**.
 2. Run the app, choose the COM port and baud rate (115200), then press **Connect**.
 3. Use **Export CSV** to save the recorded data.
 
 **Hardware**
-- Open `BTLĐLCN/Hardware/BTL_DLCN/BTL_DLCN.PrjPcb` in **Altium Designer**.
+- Open `Hardware/BTL_DLCN/BTL_DLCN.PrjPcb` in **Altium Designer**.
 
 ---
 
@@ -81,16 +81,16 @@ Sơ đồ hệ thống và cấu trúc thư mục: xem phần tiếng Anh ở tr
 ### 🚀 Hướng dẫn sử dụng
 
 **Firmware**
-1. Mở `BTLĐLCN/MCU/BTL` bằng **STM32CubeIDE**, build và nạp.
+1. Mở `MCU/BTL` bằng **STM32CubeIDE**, build và nạp.
 2. Nối USART1 (PA9 TX / PA10 RX) với máy tính qua USB-TTL.
 
 **Phần mềm**
-1. Mở `BTLĐLCN/GUI/TemperatureMonitor/TemperatureMonitor.sln` bằng **Visual Studio**.
+1. Mở `GUI/TemperatureMonitor/TemperatureMonitor.sln` bằng **Visual Studio**.
 2. Chạy chương trình, chọn cổng COM, baud 115200 rồi bấm **Connect**.
 3. Bấm **Export CSV** để lưu dữ liệu.
 
 **Phần cứng**
-- Mở `BTLĐLCN/Hardware/BTL_DLCN/BTL_DLCN.PrjPcb` bằng **Altium Designer**.
+- Mở `Hardware/BTL_DLCN/BTL_DLCN.PrjPcb` bằng **Altium Designer**.
 
 ---
 

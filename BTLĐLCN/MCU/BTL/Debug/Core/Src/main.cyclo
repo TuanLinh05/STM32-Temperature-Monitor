@@ -1,8 +1,0 @@
-../Core/Src/main.c:78:6:HAL_TIM_IC_CaptureCallback	6
-../Core/Src/main.c:107:7:Stable_Filter	8
-../Core/Src/main.c:158:5:main	4
-../Core/Src/main.c:233:6:SystemClock_Config	3
-../Core/Src/main.c:273:13:MX_TIM2_Init	6
-../Core/Src/main.c:331:13:MX_USART1_UART_Init	2
-../Core/Src/main.c:364:13:MX_GPIO_Init	1
-../Core/Src/main.c:387:6:Error_Handler	1

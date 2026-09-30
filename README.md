@@ -5,6 +5,8 @@
 ![GUI](https://img.shields.io/badge/GUI-C%23%20WinForms-512BD4?logo=dotnet&logoColor=white)
 ![Language](https://img.shields.io/badge/Language-C%20%7C%20C%23-555555)
 
+<a id="english"></a>**🇬🇧 English** · [🇻🇳 Tiếng Việt](#tieng-viet)
+
 A complete temperature measurement system: a **thermistor-based sensor board** (custom PCB), **STM32F103 firmware** that measures the signal period and converts it to temperature, and a **C# WinForms desktop app** for real-time monitoring and logging.
 
 Course project (BTL ĐLCN) at HCM University of Technology.
@@ -52,6 +54,43 @@ BTLĐLCN/
 
 **Hardware**
 - Open `BTLĐLCN/Hardware/BTL_DLCN/BTL_DLCN.PrjPcb` in **Altium Designer**.
+
+---
+
+<a id="tieng-viet"></a>
+
+## 🇻🇳 Tiếng Việt
+
+[🇬🇧 English](#english) · **🇻🇳 Tiếng Việt**
+
+Hệ thống đo nhiệt độ hoàn chỉnh gồm **mạch cảm biến dùng thermistor** (PCB tự thiết kế), **firmware STM32F103** đo chu kỳ tín hiệu rồi quy đổi ra nhiệt độ, và **phần mềm C# WinForms** giám sát, ghi dữ liệu theo thời gian thực.
+
+Bài tập lớn (BTL ĐLCN), Trường Đại học Bách khoa – ĐHQG TP.HCM.
+
+### ✨ Tính năng
+
+- **Đo theo chu kỳ:** mạch cảm biến biến điện trở thermistor thành xung vuông. TIM2 **input capture** trên PA0 (xung nhịp timer 1 MHz) đo chu kỳ tính bằng µs.
+- **Quy đổi nhiệt độ:** `1/T = 1/298.15 − period / 5569417` (Kelvin → °C).
+- **Lọc 2 tầng:** **lọc trung vị 21 mẫu** loại bỏ gai nhiễu, sau đó **EMA (α = 0.1)** làm mượt.
+- **Hiệu chuẩn tuyến tính:** `T = 1.104 × T_lọc − 1.7`.
+- **Truyền UART:** gửi `TEMP:xx.xx` mỗi 500 ms, baud 115200.
+- **Phần mềm giám sát:** biểu đồ trực tiếp (ScottPlot), giá trị hiện tại / nhỏ nhất / lớn nhất / trung bình, số mẫu và **xuất CSV**.
+
+Sơ đồ hệ thống và cấu trúc thư mục: xem phần tiếng Anh ở trên.
+
+### 🚀 Hướng dẫn sử dụng
+
+**Firmware**
+1. Mở `BTLĐLCN/MCU/BTL` bằng **STM32CubeIDE**, build và nạp.
+2. Nối USART1 (PA9 TX / PA10 RX) với máy tính qua USB-TTL.
+
+**Phần mềm**
+1. Mở `BTLĐLCN/GUI/TemperatureMonitor/TemperatureMonitor.sln` bằng **Visual Studio**.
+2. Chạy chương trình, chọn cổng COM, baud 115200 rồi bấm **Connect**.
+3. Bấm **Export CSV** để lưu dữ liệu.
+
+**Phần cứng**
+- Mở `BTLĐLCN/Hardware/BTL_DLCN/BTL_DLCN.PrjPcb` bằng **Altium Designer**.
 
 ---
 
